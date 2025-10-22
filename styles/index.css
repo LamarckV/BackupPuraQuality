@@ -12,6 +12,20 @@ body {
 }
 p{
   font-size: 20px;
+
+  animation: fadeIn 1s ease-in-out;
+  animation-timeline: view();
+  animation-range: entry 0% cover 65%;
+}
+h1{
+  animation: fadeIn 1s ease-in-out;
+  animation-timeline: view();
+  animation-range: entry 0% cover 70%;
+}
+img{
+  animation: fadeIn 1s ease-in-out both;
+  animation-timeline: view();
+  animation-range: entry 0% cover 50%;
 }
 /* -------------------CORPO DO SITE------------------- */
 .contLanding {
@@ -32,7 +46,7 @@ p{
   margin-left: 5%;
   z-index: 3;
 
-  animation: fadeIn 2.5s forwards;
+  /*animation: fadeIn 2.5s forwards;*/
 }
 main.corpo {
   margin: 0;
@@ -93,7 +107,7 @@ section {
   background-clip: text; /* para navegadores não-webkit */
   color: transparent;
   z-index: 2;
-  filter: brightness(2);  
+  filter: brightness(2);
 
   animation: fadeIn 1.5s forwards;
 }
@@ -142,6 +156,8 @@ section {
   right: 90px;
   width: 45%;
   z-index: 4;
+
+  animation: fadeIn 1.5s forwards;
 }
 .faixa {
   position: absolute;
@@ -166,15 +182,15 @@ section {
   width: 600px;
   height: 600px;
   background: radial-gradient(
-      circle at 35% 55%,
-      rgba(67, 150, 187, 0.9) 0%,
-      /* azul claro */ rgba(171, 36, 255, 0.449) 60%
-    ),
-    radial-gradient(
-      circle at 65% 45%,
-      rgba(130, 60, 170, 0.564) 0%,
-      /* violeta */ rgba(140, 40, 157, 0.475) 70%
-    );
+          circle at 35% 55%,
+          rgba(67, 150, 187, 0.9) 0%,
+              /* azul claro */ rgba(171, 36, 255, 0.449) 60%
+  ),
+  radial-gradient(
+          circle at 65% 45%,
+          rgba(130, 60, 170, 0.564) 0%,
+              /* violeta */ rgba(140, 40, 157, 0.475) 70%
+  );
   filter: blur(80px);
   transform: rotate(25deg);
 }
@@ -196,15 +212,15 @@ section {
   width: 600px;
   height: 600px;
   background: radial-gradient(
-      circle at 35% 55%,
-      rgba(15, 109, 153, 0.9) 0%,
-      /* azul claro */ rgba(157, 0, 255, 0.262) 60%
-    ),
-    radial-gradient(
-      circle at 65% 45%,
-      rgba(60, 113, 170, 0.9) 0%,
-      rgb(40, 62, 157) 70%
-    );
+          circle at 35% 55%,
+          rgba(15, 109, 153, 0.9) 0%,
+              /* azul claro */ rgba(157, 0, 255, 0.262) 60%
+  ),
+  radial-gradient(
+          circle at 65% 45%,
+          rgba(60, 113, 170, 0.9) 0%,
+          rgb(40, 62, 157) 70%
+  );
   filter: blur(80px);
   fill: brightness(0.5);
   opacity: 0.7;
@@ -213,11 +229,8 @@ section {
   transform: rotate(25deg);
 }
 
-.bola_cromo2,.faixa{
+.bola_cromo,.bola_cromo2,.faixa{
   animation: fadeIn 1.5s forwards;
-}
-.led-glow-container, .led-glow, .led-container, .led, .celular, .bola_cromo{
-  animation: fadeIn 2.0s forwards;
 }
 /* -------------------Container principal------------------- */
 /* Apresentação */
@@ -256,6 +269,7 @@ section {
   height: 150px;
   border-radius: 100%;
 }
+
 .qsGrid{
   position: relative;
   display: grid;
@@ -323,17 +337,21 @@ section {
   z-index: 2;
   border-radius: 50%;
   background: radial-gradient(
-      circle at 35% 55%,
-      rgba(0, 255, 145, 0.9) 0%,
-      rgba(0, 255, 179, 0.449) 60%
-    ),
-    radial-gradient(
-      circle at 65% 45%,
-      rgba(0, 255, 238, 0.564) 0%,
-      rgba(0, 204, 255, 0.475) 70%
-    );
+          circle at 35% 55%,
+          rgba(0, 255, 145, 0.9) 0%,
+          rgba(0, 255, 179, 0.449) 60%
+  ),
+  radial-gradient(
+          circle at 65% 45%,
+          rgba(0, 255, 238, 0.564) 0%,
+          rgba(0, 204, 255, 0.475) 70%
+  );
   filter: blur(80px);
   transform: rotate(25deg);
+
+  animation: fadeIn 1s ease-in-out both;
+  animation-timeline: view();
+  animation-range: entry 20% cover 50%;
 }
 .ODSimg{
   position: relative;
@@ -398,10 +416,10 @@ section {
 }
 /* Six Sigma */
 .sixS > h1{
- position: relative;
- top: -100px;
- left: 225px;
- font-size: 40px;
+  position: relative;
+  top: -100px;
+  left: 225px;
+  font-size: 40px;
 }
 .gridSix{
   position: relative;
@@ -483,7 +501,7 @@ section {
 .aiGrid > p{
   font-size: 22.5px;
   width: 600px;
-  
+
 }
 /* -------------------footer------------------- */
 .textoFooter{
@@ -685,15 +703,15 @@ section {
   width: 100%;
   height: 4000px;
   background: radial-gradient(
-      circle at 35% 55%,
-      rgba(67, 150, 187, 0.9) 0%,
-      /* azul claro */ rgba(171, 36, 255, 0.449) 60%
-    ),
-    radial-gradient(
-      circle at 65% 45%,
-      rgba(130, 60, 170, 0.564) 0%,
-      /* violeta */ rgba(140, 40, 157, 0.475) 70%
-    );
+          circle at 35% 55%,
+          rgba(67, 150, 187, 0.9) 0%,
+              /* azul claro */ rgba(171, 36, 255, 0.449) 60%
+  ),
+  radial-gradient(
+          circle at 65% 45%,
+          rgba(130, 60, 170, 0.564) 0%,
+              /* violeta */ rgba(140, 40, 157, 0.475) 70%
+  );
   filter: blur(80px);
 }
 .bolaC7Back{
@@ -701,7 +719,7 @@ section {
   transform: rotate(90deg);
   top: -60%;
   left: -5%;
-  width: 500px; 
+  width: 500px;
 }
 .bolaC4Back{
   position: relative;
@@ -855,15 +873,15 @@ section {
   width: 500px;
   height: 500px;
   background: radial-gradient(
-      circle at 35% 55%,
-      rgb(49, 190, 255) 0%,
-      /* azul claro */ rgb(176, 49, 255) 60%
-    ),
-    radial-gradient(
-      circle at 65% 45%,
-      rgb(126, 188, 255) 0%,
-      rgb(103, 130, 255) 70%
-    );
+          circle at 35% 55%,
+          rgb(49, 190, 255) 0%,
+              /* azul claro */ rgb(176, 49, 255) 60%
+  ),
+  radial-gradient(
+          circle at 65% 45%,
+          rgb(126, 188, 255) 0%,
+          rgb(103, 130, 255) 70%
+  );
   filter: blur(80px);
   fill: brightness(100);
   pointer-events: none;
@@ -901,7 +919,7 @@ section {
   z-index: 3; /* Fica na frente do background estático */
 }
 .plano2{
-    backdrop-filter: blur(10px) saturate(200%);
+  backdrop-filter: blur(10px) saturate(200%);
   -webkit-backdrop-filter: blur(10px) saturate(200%);
   background: rgba(0, 0, 0, 0.49); /* cinza escuro */
 }
@@ -935,7 +953,7 @@ section {
   width: 85%;
 }
 .quality3{
-    width: 91%;
+  width: 91%;
 }
 .quality_p,
 .quality_p2,
@@ -1079,61 +1097,61 @@ section {
   backdrop-filter: blur(20px) saturate(200%);
   -webkit-backdrop-filter: blur(20px) saturate(200%);
   background: linear-gradient(
-    #ff00c83f,
-    #6a00ff47,
-    #0099ff47
+          #ff00c83f,
+          #6a00ff47,
+          #0099ff47
   ); /* cinza escuro */
   border: 5px solid #58008b;
   transform: scale(1.1);
   transition: all 0.6s cubic-bezier(0.4, 0, 0.2, 1);
   .quality_link {
-    position: relative;
-    color: rgb(255, 255, 255);
-    background: #4642BA;
-    font-size: 25px;
-    transition: 0.5s ease;
-    justify-content: center;
-    align-items: center;
-    left: 10%;
-    width: 80%;
+      position: relative;
+      color: rgb(255, 255, 255);
+      background: #4642BA;
+      font-size: 25px;
+      transition: 0.5s ease;
+      justify-content: center;
+      align-items: center;
+      left: 10%;
+      width: 80%;
   }
   .quality_p {
-    color: rgb(255, 255, 255);
-    transition: all 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+      color: rgb(255, 255, 255);
+      transition: all 0.6s cubic-bezier(0.4, 0, 0.2, 1);
   }
   .quality {
-    color: rgb(255, 255, 255);
-    transition: all 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+      color: rgb(255, 255, 255);
+      transition: all 0.6s cubic-bezier(0.4, 0, 0.2, 1);
   }
   .plano1 ul li {
-    color: rgb(255, 255, 255);
-    transition: all 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+      color: rgb(255, 255, 255);
+      transition: all 0.6s cubic-bezier(0.4, 0, 0.2, 1);
   }
   .plano1 ul li::before {
-    background: linear-gradient(135deg, #00ff88, #00cc6a);
-    box-shadow: 0 2px 8px rgba(0, 255, 136, 0.4);
+      background: linear-gradient(135deg, #00ff88, #00cc6a);
+      box-shadow: 0 2px 8px rgba(0, 255, 136, 0.4);
   }
   .plano1 ul li:hover::before {
-    background: linear-gradient(135deg, #00ff88, #00cc6a);
-    transform: translateY(-50%) scale(1.1);
-    box-shadow: 0 4px 12px rgba(0, 255, 136, 0.5);
+      background: linear-gradient(135deg, #00ff88, #00cc6a);
+      transform: translateY(-50%) scale(1.1);
+      box-shadow: 0 4px 12px rgba(0, 255, 136, 0.5);
   }
 }
 .plano2:hover {
-    position: relative;
-    top: 16%;
-    border-radius: 20px;
-    backdrop-filter: blur(20px) saturate(200%);
-    -webkit-backdrop-filter: blur(20px) saturate(200%);
-    background: linear-gradient(
-      #ff00c83f,
-      #6a00ff47,
-      #0099ff47
-    ); /* cinza escuro */
-    border: 5px solid #58008b;
-    transform: scale(1.1);
-    transition: all 0.6s cubic-bezier(0.4, 0, 0.2, 1);
-    .quality_link2{
+  position: relative;
+  top: 16%;
+  border-radius: 20px;
+  backdrop-filter: blur(20px) saturate(200%);
+  -webkit-backdrop-filter: blur(20px) saturate(200%);
+  background: linear-gradient(
+          #ff00c83f,
+          #6a00ff47,
+          #0099ff47
+  ); /* cinza escuro */
+  border: 5px solid #58008b;
+  transform: scale(1.1);
+  transition: all 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+  .quality_link2{
       position: relative;
       color: rgb(255, 255, 255);
       background: #4642BA;
@@ -1143,44 +1161,44 @@ section {
       align-items: center;
       left: 10%;
       width: 80%;
-    }
+  }
   .quality_p2 {
-    color: rgb(255, 255, 255);
-    transition: all 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+      color: rgb(255, 255, 255);
+      transition: all 0.6s cubic-bezier(0.4, 0, 0.2, 1);
   }
   .quality2 {
-    color: rgb(255, 255, 255);
-    transition: all 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+      color: rgb(255, 255, 255);
+      transition: all 0.6s cubic-bezier(0.4, 0, 0.2, 1);
   }
   .plano2 ul li {
-    color: rgb(255, 255, 255);
-    transition: all 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+      color: rgb(255, 255, 255);
+      transition: all 0.6s cubic-bezier(0.4, 0, 0.2, 1);
   }
   .plano2 ul li::before {
-    background: linear-gradient(135deg, #00ff88, #00cc6a);
-    box-shadow: 0 2px 8px rgba(0, 255, 136, 0.4);
+      background: linear-gradient(135deg, #00ff88, #00cc6a);
+      box-shadow: 0 2px 8px rgba(0, 255, 136, 0.4);
   }
   .plano2 ul li:hover::before {
-    background: linear-gradient(135deg, #00ff88, #00cc6a);
-    transform: translateY(-50%) scale(1.2);
-    box-shadow: 0 4px 15px rgba(0, 255, 136, 0.8);
+      background: linear-gradient(135deg, #00ff88, #00cc6a);
+      transform: translateY(-50%) scale(1.2);
+      box-shadow: 0 4px 15px rgba(0, 255, 136, 0.8);
   }
 }
 .plano3:hover {
-    position: relative;
-    top: 16%;
-    border-radius: 20px;
-    backdrop-filter: blur(20px) saturate(200%);
-    -webkit-backdrop-filter: blur(20px) saturate(200%);
-    background: linear-gradient(
-      #ff00c83f,
-      #6a00ff47,
-      #0099ff47
-    ); /* cinza escuro */
-    border: 5px solid #58008b;
-    transform: scale(1.1);
-    transition: all 0.6s cubic-bezier(0.4, 0, 0.2, 1);
-    .quality_link3{
+  position: relative;
+  top: 16%;
+  border-radius: 20px;
+  backdrop-filter: blur(20px) saturate(200%);
+  -webkit-backdrop-filter: blur(20px) saturate(200%);
+  background: linear-gradient(
+          #ff00c83f,
+          #6a00ff47,
+          #0099ff47
+  ); /* cinza escuro */
+  border: 5px solid #58008b;
+  transform: scale(1.1);
+  transition: all 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+  .quality_link3{
       position: relative;
       color: rgb(255, 255, 255);
       background: #4642BA;
@@ -1190,27 +1208,27 @@ section {
       align-items: center;
       left: 10%;
       width: 80%;
-    }
+  }
   .quality_p3 {
-    color: rgb(255, 255, 255);
-    transition: all 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+      color: rgb(255, 255, 255);
+      transition: all 0.6s cubic-bezier(0.4, 0, 0.2, 1);
   }
   .quality3 {
-    color: rgb(255, 255, 255);
-    transition: all 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+      color: rgb(255, 255, 255);
+      transition: all 0.6s cubic-bezier(0.4, 0, 0.2, 1);
   }
   .plano3 ul li {
-    color: rgb(255, 255, 255);
-    transition: all 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+      color: rgb(255, 255, 255);
+      transition: all 0.6s cubic-bezier(0.4, 0, 0.2, 1);
   }
   .plano3 ul li::before {
-    background: linear-gradient(135deg, #00ff88, #00cc6a);
-    box-shadow: 0 2px 8px rgba(0, 255, 136, 0.4);
+      background: linear-gradient(135deg, #00ff88, #00cc6a);
+      box-shadow: 0 2px 8px rgba(0, 255, 136, 0.4);
   }
   .plano3 ul li:hover::before {
-    background: linear-gradient(135deg, #00ff88, #00cc6a);
-    transform: translateY(-50%) scale(1.2);
-    box-shadow: 0 4px 15px rgba(0, 255, 136, 0.8);
+      background: linear-gradient(135deg, #00ff88, #00cc6a);
+      transform: translateY(-50%) scale(1.2);
+      box-shadow: 0 4px 15px rgba(0, 255, 136, 0.8);
   }
 }
 /* 🔥 Deixa todos os checks verdes quando passa o mouse no plano */
@@ -1228,31 +1246,31 @@ section {
 /* -------------------Animations------------------- */
 @keyframes girando {
   0% {
-    transform: rotate(0deg);
+      transform: rotate(0deg);
   }
   100% {
-    transform: rotate(360deg);
+      transform: rotate(360deg);
   }
 }
 
 @keyframes reveal{
   from {
-    opacity: 0;
-    clip-path: inset(45% 20% 45% 20%);
+      opacity: 0;
+      clip-path: inset(45% 20% 45% 20%);
   }
   to {
-    opacity: 1;
-    clip-path: inset(0% 0% 0% 0%);
+      opacity: 1;
+      clip-path: inset(0% 0% 0% 0%);
   }
 }
 
 @keyframes fadeIn {
-  from { 
-    opacity: 0; 
-    transform: translateY(30px); 
+  from {
+      opacity: 0;
+      transform: translateY(30px);
   }
-  to { 
-    opacity: 1; 
-    transform: translateY(0); 
+  to {
+      opacity: 1;
+      transform: translateY(0);
   }
 }
