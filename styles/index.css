@@ -680,9 +680,16 @@ section {
   top: -7%;
 }
 .iconD{
+  position: relative;
+  top: 7px;
   width: 15px;
 }
+.icondAdri{
+  top: 5px;
+}
 .iconE{
+  position: relative;
+  top: 7px;
   width: 15px;
 }
 .areaT{
@@ -718,6 +725,9 @@ section {
   left: 29%;
   color: white;
   font-weight: bold;
+}
+.bolaC4Planos, .bolaC6Planos{
+  display: none;
 }
 /* -------------------Background Fixo------------------- */
 .background-layer {
@@ -1680,6 +1690,18 @@ section {
     width: 35%;
     top: -15%;
   }
+  .bolaC4Planos, .bolaC6Planos{
+    position: relative;
+    display: block;
+    width: 300px;
+  }
+  .bolaC4Planos{
+    left: -20%;
+  }
+  .bolaC6Planos{
+    right: -80%;
+    top: -7%;
+  }
   /* FOOTER */
   .footer{
     bottom: -5550px;
@@ -1689,9 +1711,16 @@ section {
   }
   .carousel-wrapper{
     top: -25%;
+    left: 12.5%;
   }
   .carousel-btn{
     top: 20%;
+  }
+  .prev-btn{
+    left: 5%;
+  }
+  .next-btn{
+    right: 12.5%;
   }
 
 

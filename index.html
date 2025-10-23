@@ -161,6 +161,8 @@
                 <img class="bola" src="img/bolaGira.png" alt="">
                 <img id="bolaPg" class="bolaPg" src="img/bola_cromo.png" alt="">
                 <img id="bolaPg" class="bolaPg3" src="img/bola_cromo3.png" alt="">
+                <img class="bolaC4Planos" src="img/bolaC4.png" alt="">
+                <img class="bolaC6Planos" src="img/bolaC6.png" alt="">
         </div>
             <div class="plano1">
             <h2 class="quality">Quality</h2>
@@ -238,7 +240,7 @@
                                 <div class="contatoGrid Adri">
                                     <img class="iconE" src="img/emailIcon.png" alt="Email:"><p>adriel.pimentel@germinare<br>.org.br
                                     </p>
-                                    <img class="iconD" src="img/discordIcon.png" alt="Discord:"><p>adrielpimentel
+                                    <img class="iconD icondAdri" src="img/discordIcon.png" alt="Discord:"><p>adrielpimentel
                                     </p>
                                 </div>
                         </div>
@@ -305,64 +307,74 @@
     </footer>
     <script>
         document.addEventListener('DOMContentLoaded', function() {
-        const carouselTrack = document.getElementById('carouselTrack');
-        const prevBtn = document.getElementById('prevBtn');
-        const nextBtn = document.getElementById('nextBtn');
+    const carouselTrack = document.getElementById('carouselTrack');
+    const prevBtn = document.getElementById('prevBtn');
+    const nextBtn = document.getElementById('nextBtn');
+    const carouselWrapper = document.querySelector('.carousel-wrapper');
 
-        // Define as dimensões fixas dos cards e espaçamento
-        const cardWidth = 250;
-        const gap = 20;
+    const cardWidth = 250;
+    const gap = 20;
+    const cards = Array.from(carouselTrack.children);
+    const totalCards = cards.length;
 
-        // Pega todos os cards reais (sem clones)
-        const cards = Array.from(carouselTrack.children);
-        const totalCards = cards.length;
+    let visibleCards = Math.min(5, totalCards);
+    let currentIndex = 0;
 
-        // Número de cards visíveis ao mesmo tempo (máximo 5)
-        const visibleCards = Math.min(5, totalCards);
+    // Função que atualiza o carrossel
+    function updateCarousel() {
+        const offset = -currentIndex * (cardWidth + gap);
+        carouselTrack.style.transform = `translateX(${offset}px)`;
+    }
 
-        // Calcula a largura total necessária para mostrar 'visibleCards' cards
-        const trackWidth = (cardWidth + gap) * visibleCards - gap; // menos um gap no final
+    // Atualiza largura do wrapper conforme número de cards visíveis
+    function updateWrapperWidth() {
+        const trackWidth = (cardWidth + gap) * visibleCards - gap;
+        carouselWrapper.style.width = `${trackWidth}px`;
+    }
 
-        // Define o índice atual (começa no primeiro conjunto)
-        let currentIndex = 0;
-
-        // Função que move o carrossel com base no índice atual
-        function updateCarousel() {
-            const offset = -currentIndex * (cardWidth + gap);
-            carouselTrack.style.transform = `translateX(${offset}px)`;
+    // Função para ajustar o carrossel conforme o tamanho da tela
+    function handleResize() {
+        if (window.innerWidth <= 800) {
+            visibleCards = 2; // mostra apenas 1 card
+        } else {
+            visibleCards = Math.min(5, totalCards); // mostra até 5 cards em telas maiores
+        }2
+        // Corrige o índice se necessário
+        if (currentIndex > totalCards - visibleCards) {
+            currentIndex = totalCards - visibleCards;
         }
 
-        // Botão "Anterior"
-        prevBtn.addEventListener('click', () => {
-            if (currentIndex > 0) {
-                currentIndex--;
-                updateCarousel();
-            } else {
-                currentIndex = 1;
-                updateCarousel();
-            }
-        });
+        updateWrapperWidth();
+        updateCarousel();
+    }
 
-        // Botão "Próximo"
-        nextBtn.addEventListener('click', () => {
-            // Permite avançar enquanto houver mais cards à frente
-            if (currentIndex < totalCards - visibleCards) {
-                currentIndex++;
-                updateCarousel();
-            } else {
-                currentIndex = 0
-                updateCarousel();
-            }
-        });
-
-        // --- CORREÇÃO PARA GARANTIR QUE O ÚLTIMO CARD NÃO FIQUE CORTADO ---
-        // Ajusta o width do wrapper para caber exatamente 'visibleCards' cards
-        const carouselWrapper = document.querySelector('.carousel-wrapper');
-        carouselWrapper.style.width = `${trackWidth}px`;
-
-        // Inicializa o carousel na posição correta
+    // Botão "Anterior"
+    prevBtn.addEventListener('click', () => {
+        if (currentIndex > 0) {
+            currentIndex--;
+        } else {
+            currentIndex = totalCards - visibleCards; // loop para o final
+        }
         updateCarousel();
     });
+
+    // Botão "Próximo"
+    nextBtn.addEventListener('click', () => {
+        if (currentIndex < totalCards - visibleCards) {
+            currentIndex++;
+        } else {
+            currentIndex = 0; // volta ao início
+        }
+        updateCarousel();
+    });
+
+    // Inicializa o carrossel
+    handleResize();
+
+    // Escuta mudanças de tamanho de tela
+    window.addEventListener('resize', handleResize);
+});
+
     </script>
 </body>
 </html>
