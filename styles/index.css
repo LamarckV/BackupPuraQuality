@@ -1022,6 +1022,7 @@ section {
   padding: 8px 0;
   padding-left: 35px;
   color: #cccccc;
+  font-weight: 800;
   font-size: 14px;
   margin-bottom: 5px;
   transition: all 0.3s ease;
@@ -1051,6 +1052,7 @@ section {
   padding: 8px 0;
   padding-left: 35px;
   color: #cccccc;
+  font-weight: 800;
   font-size: 14px;
   margin-bottom: 5px;
   transition: all 0.3s ease;
@@ -1088,8 +1090,10 @@ section {
   padding-left: 35px;
   color: #cccccc;
   font-size: 14px;
+  font-weight: 800;
   margin-bottom: 5px;
   transition: all 0.3s ease;
+  width: 300px;
 }
 
 .plano3 ul li::before {
@@ -1250,7 +1254,6 @@ section {
       transition: all 0.6s cubic-bezier(0.4, 0, 0.2, 1);
   }
   .plano3 ul li {
-      color: rgb(255, 255, 255);
       transition: all 0.6s cubic-bezier(0.4, 0, 0.2, 1);
   }
   .plano3 ul li::before {
@@ -1320,6 +1323,7 @@ section {
     width: 90%;
     top: -35%;
     left: -0.3%;
+    height: 420vh;
   }
   .titulo-pura{
     top: 24%;
@@ -1378,7 +1382,7 @@ section {
     justify-self: center;
   }
   .logoMagna{
-    top: -100%;
+    top: -90%;
     width: 80px;
     height: 80px;
   }
@@ -1584,13 +1588,111 @@ section {
     font-size: var(--tamanho-subtitulo);
     width: 600px;
     text-align: center;
+    top: 15px;
   }
   .aiGrid > p{
     display: none;
   }
   .aiText{
+    position: relative;
+    top: 30px;
     display: block;
     font-size: var(--tamanho-texto);
-    width: 700px;
+    width: 675px;
   }
+  /* BACKGROUND */
+  .background-layer{
+    position: absolute;
+    height: 460vh;
+    top: -100%;
+  }
+  .ledBack{
+   height: 420vh;
+   top: 34%;
+  }
+  .bolaC7Back{
+   top: -50%;
+   left: -40%;
+  }
+  .bolaC4Back{
+    top: -65%;
+    left: 80%;
+  }
+  .bolaC3Back{
+    top: -77%;
+    left: 80%;
+    width: 40%;
+  }
+  .bolaC5Back{
+    top: -65%;
+    left: -50%;
+  }
+  .bolaC6Back{
+    top: -65%;
+    left: 60%;
+  }
+  .bolaC2Back{
+    top: -65%;
+    width: 60%;
+    left: -40%;
+  }
+  .bolaC8Back{
+    top: -66%;
+    left: 60%;
+  }
+  .bolaC7Back2{
+    top: -70%;
+  }
+  /* PLANOS */
+  .planos_pg{
+    bottom: -4650px;
+    height: 200vh;
+  }
+  .plano1{
+    top: 10%;
+    left: 2.5%;
+  }
+  .plano3{
+    top: 45%;
+    left: 28.5%;
+  }
+  .plano2{
+    top: 10%;
+    left: 52.5%;
+  }
+  .plano3:hover{
+    top: 44%;
+  }
+  .plano1:hover, .plano2:hover{
+    top: 8%;
+  }
+  .bola{
+    top: 20%;
+    left: 5%;
+    width: 90%;
+  }
+  .bolaPg{
+    top: -50%;
+    left: -25%;
+    width: 45%;
+  }
+  .bolaPg3{
+    width: 35%;
+    top: -15%;
+  }
+  /* FOOTER */
+  .footer{
+    bottom: -5550px;
+  }
+  .textoFooter{
+    top: -30%;
+  }
+  .carousel-wrapper{
+    top: -25%;
+  }
+  .carousel-btn{
+    top: 20%;
+  }
+
+
 }
