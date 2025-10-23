@@ -1,3 +1,11 @@
+:root{
+  --tamanho-texto: 15px;
+  --tamanho-titulo: 40px;
+  --tamanho-subtitulo: 35px;
+  --tamanho-conexo: 20px;
+  --fundo: rgb(13, 0, 34);
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -38,7 +46,7 @@ img{
 }
 .contPrincipal {
   position: absolute;
-  height: 555vh;
+  height: 560vh;
   background-color: rgb(13, 0, 34); /* cor leve para visualização */
   width: 90%;
   border-radius: 50px;
@@ -61,7 +69,7 @@ section {
   position: absolute;
   height: 120vh;
   width: 100%;
-  bottom: -4900px;
+  bottom: -5000px;
   z-index: 3;
 }
 
@@ -77,7 +85,7 @@ section {
 }
 .footer {
   position: absolute;
-  bottom: -5800px;
+  bottom: -5900px;
   width: 100%;
   height: 900px;
   background: linear-gradient(#000000 85%, #010139);
@@ -269,7 +277,9 @@ section {
   height: 150px;
   border-radius: 100%;
 }
-
+.respQs{
+  display: none;
+}
 .qsGrid{
   position: relative;
   display: grid;
@@ -451,6 +461,9 @@ section {
   left: 18px;
   width: 400px;
 }
+.sixTextResp{
+  display: none;
+}
 .relatorios{
   position: relative;
   top: -10%;
@@ -477,9 +490,19 @@ section {
 }
 .rgqimg{
   position: relative;
+  left: 10%;
+  width: 200px;
+  border-radius: 15px;
+}
+.lupa{
+  position: relative;
+  top: 20px;
+}
+.grafico{
+  position: relative;
   left: 5%;
-  top: 50px;
-  width: 250px;
+  top: 100px;
+  border: 5px solid var(--fundo);
 }
 .ai{
   position: relative;
@@ -490,6 +513,8 @@ section {
   display: flex;
   justify-self: center;
   font-size: 45px;
+  width: 750px;
+  text-align: center;
 }
 .aiGrid{
   position: relative;
@@ -501,7 +526,14 @@ section {
 .aiGrid > p{
   font-size: 22.5px;
   width: 600px;
-
+}
+.aiText{
+  display: flex;
+  justify-self: center;
+  text-align:center;
+  width: 1000px;
+  position: relative;
+  top: 15px;
 }
 /* -------------------footer------------------- */
 .textoFooter{
@@ -1243,7 +1275,7 @@ section {
   background: linear-gradient(135deg, #00ff88, #00cc6a);
   box-shadow: 0 4px 12px rgba(0, 255, 136, 0.5);
 }
-/* -------------------Animations------------------- */
+/* ------------------- Animations ------------------- */
 @keyframes girando {
   0% {
       transform: rotate(0deg);
@@ -1272,5 +1304,293 @@ section {
   to {
       opacity: 1;
       transform: translateY(0);
+  }
+}
+/* ------------------- Responsividade ------------------- */
+@media (max-width:800px) {
+  /* Header */
+  .lb{
+    right: 1%;
+  }
+  .logo{
+    left: 1%;
+  }
+  /* landingPage */
+  .contPrincipal{
+    width: 90%;
+    top: -35%;
+    left: -0.3%;
+  }
+  .titulo-pura{
+    top: 24%;
+    left: 7%;
+    font-size: var(--tamanho-titulo);
+    font-weight: 900;
+  }
+  .celular{
+    top: 10%;
+    right: 1%;
+    width: 50%;
+  }
+  .texto-inicio{
+    top: 30%;
+    left: 8.8%;
+    font-size: 12px;
+  }
+  .botao-inicio{
+    top: 33%;
+    left: 14.5%;
+    width: 227px;
+    font-size: var(--tamanho-texto);
+  }
+  .faixa{
+    width: 50%;
+  }
+  .bola_cromo{
+    width: 50%;
+    top: 35%;
+    left: -25%;
+  }
+  .bola_cromo2{
+    top: -20%;
+    left: -10%;
+  }
+  /* ContPrincipal */
+  .quemSomos{
+    top: 1.5%;
+    
+  }
+  .qsGrid > p{
+    font-size: var(--tamanho-texto);
+    width: 500px;
+    left: -5%;
+  }
+  .qsP{
+    display: none;
+  }
+  .respQs{
+    display: block;
+  }
+  .quemSomos > h1{
+    font-weight: 800;
+    font-size: var(--tamanho-titulo);
+    display: flex;
+    justify-self: center;
+  }
+  .logoMagna{
+    top: -100%;
+    width: 80px;
+    height: 80px;
+  }
+  .logoQS{
+    top: -60%;
+    left: -780%;
+    width: 80px;
+    height: 80px;
+  }
+  .gridFunc{
+    display: block;
+    top: 3%;
+  }
+  .tituloFunc{
+    font-size: var(--tamanho-subtitulo);
+  }
+  .tituloFunc2{
+    font-size: 35px;
+  }
+  .card > p{
+    font-size: var(--tamanho-texto);
+    width: 300px;
+  }
+  .funcText{
+    display: none;
+  }
+  .funcP{
+    display: block;
+  }
+  .funcCard{
+    position: relative;
+    left: -15%;
+  }
+  .funcCard2{
+    position: relative;
+    left: 56%;
+    top: -186px;
+  }
+  .conexo{
+    top: 0%;
+    font-size: 20px;
+  }
+  .setores{
+    top: 1.5%;
+    display: flex;
+    justify-self: center;
+    left: 5%;
+  }
+  .tituloSet{
+    display: flex;
+    justify-self: center;
+    font-size: var(--tamanho-titulo);
+    width: 500px;
+    position: relative;
+    top: -5%;
+  }
+  .cardSet > p{
+    font-size: var(--tamanho-texto);
+    width: 400px;
+  }
+  .imgPredio{
+    width: 25%;
+    height: 25%;
+    border-radius: 15px;
+    position: relative;
+    top: 50px;
+    left: -20%;
+  }
+  .ledODS{
+    height: 200px;
+    width: 200px;
+    position: relative;
+    top: -250px;
+    left: 10%;
+    background: radial-gradient(
+          circle at 35% 55%,
+          rgb(0, 255, 145) 0%,
+          rgb(0, 255, 179) 60%
+  ),
+  radial-gradient(
+          circle at 65% 45%,
+          rgb(0, 255, 238) 0%,
+          rgb(0, 204, 255) 70%
+  );
+  }
+  .ODSimg{
+    position: relative;
+    top: -5%;
+  }
+  .ODS{
+    position: relative;
+    top: 4.5%;
+  }
+  .ODSconc{
+    position: relative;
+    left: -100%;
+  }
+  .ODStitulo{
+    left: -55%;
+    top: 80px;
+    font-size: 100px;
+    font-weight: 900;
+  }
+  .exp{
+    font-size: var(--tamanho-conexo);
+    width: 700px;
+    position: relative;
+    top: 250px;
+    left: -115%;
+  }
+  .ODSfinal{
+    font-size: var(--tamanho-conexo);
+    width: 700px;
+    position: relative;
+    top: 350px;
+    left: -115%;
+  }
+  .imgMeta{
+    width: 200px;
+  }
+  .gridODS{
+    grid-template-columns: repeat(2,1fr);
+    row-gap: 10px;
+    left: -105%;
+  }
+  .cardMetas > p{
+    font-size: var(--tamanho-texto);
+  }
+  .sixS{
+    position: relative;
+    top: 3.5%;
+  }
+  .sixS > h1{
+    font-size: var(--tamanho-subtitulo);
+    left: 7.5%;
+    width: 600px;
+    text-align: center;
+  }
+  .gridSix{
+    grid-template-columns: repeat(1,1fr);
+    position: relative;
+    top: -20px;
+  }
+  .gridSix > p{
+    font-size: var(--tamanho-texto);
+  }
+  .sixText{
+    left: -40%; 
+  }
+  .roda{
+    width: 300px;    
+  }
+  .smbSS{
+    width: 300px;
+    top: -135%;
+    left: -1.25%;
+  }
+  .imgSix{
+    position: relative;
+    top: -225px;
+    right: -70%;
+    width: 300px;
+    height: 300px;
+  }
+  .sixText2{
+    display: none;
+  }
+  .sixTextResp{
+    display: block;
+    font-size: var(--tamanho-texto);
+    width: 300px;
+    position: relative;
+    top: -470px;
+    left: 4%;
+  }
+  .relatorios{
+    top: -5.5%;
+  }
+  .relatorios > h1{
+    font-size: var(--tamanho-subtitulo);
+    width: 500px;
+    text-align: center;
+  }
+  .rgqimg{
+    width: 150px;
+    height: 150px;
+  }
+  .lupa{
+    left: 4%;
+  }
+  .grafico{
+    left: -5%;
+  }
+  .rtGrid > p{
+    font-size: var(--tamanho-texto);
+    left: -2%;
+  }
+  .ai{
+    position: relative;
+    top: -3%;
+  }
+  .ai > h1{
+    font-size: var(--tamanho-subtitulo);
+    width: 600px;
+    text-align: center;
+  }
+  .aiGrid > p{
+    display: none;
+  }
+  .aiText{
+    display: block;
+    font-size: var(--tamanho-texto);
+    width: 700px;
   }
 }
