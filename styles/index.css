@@ -1016,6 +1016,8 @@ section {
   width: 30%;
   color: rgb(158, 158, 158);
   left: 32%;
+
+  animation: none;
 }
 .quality_link,
 .quality_link2,
