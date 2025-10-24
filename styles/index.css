@@ -48,7 +48,7 @@ button {
 }
 .contPrincipal {
   position: absolute;
-  height: 560vh;
+  height: 4100px;
   background-color: rgb(13, 0, 34); /* cor leve para visualização */
   width: 90%;
   border-radius: 50px;
