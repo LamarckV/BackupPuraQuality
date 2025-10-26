@@ -1402,6 +1402,87 @@ hr.divisoria2 {
   }
 }
 /* ------------------- Responsividade ------------------- */
+@media (max-width: 1340px){
+  /* LANDING */
+  .celular{
+    right: 0%;
+    top: 20%;
+  }
+  .texto-inicio{
+    left: 10%;
+  }
+  .titulo-pura{
+    left: 2.5%;
+  }
+  .botao-inicio{
+    left: 18%;
+  }
+  .bola_cromo2{
+    top: -30%;
+  }
+  /* CONTPRINCIPAL */
+  .qsGrid{
+    left: -2.5%;
+  }
+  .qsP{
+    left: 2.5%;
+  }
+  .logoMagna{
+    left: 40%;
+  }
+  .logoQS{
+    right: 10%;
+  }
+  .gridFunc{
+    gap: 50px;
+  }
+  .setores{
+    left: 6.5%;
+  }
+  .imgPredio{
+    width: 65%;
+  }
+  .ledODS{
+    left: 9%;
+  }
+  .ODSconc{
+    position: relative;
+    left: -13%;
+    top: 50px;
+  }
+  .ODStitulo{
+    position: relative;
+    left: -10%;
+  }
+  .exp{
+    left: -60%;
+  }
+  .imgMeta{
+    width: 200px;
+  }
+  .gridODS{
+    left: -65%;
+  }
+  .ODSfinal{
+    left: -58%;
+  }
+  .sixS > h1{
+    left: 10%;
+  }
+  .gridSix{
+    left: 3%;
+  }
+  .relatorios > h1{
+    width: 600px;
+  }
+  .rtGrid{
+    top: 50px;
+    left: -6.5%;
+  }
+  .ai{
+    top: -150px;
+  }
+}
 @media (max-width: 800px) {
   /* Header */
   .lb {
