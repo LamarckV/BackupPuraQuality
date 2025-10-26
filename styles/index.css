@@ -739,6 +739,65 @@ section {
 .bolaC6Planos {
   display: none;
 }
+hr.divisoria {
+  position: relative;
+  top: -20%;
+  height: 0.5px;
+  border: none;
+  width: 100%;
+  background-color: rgba(171, 36, 255, 0.449);
+  margin: 0;
+}
+hr.divisoria2 {
+  position: relative;
+  top: 19%;
+  height: 0.5px;
+  border: none;
+  width: 100%;
+  background-color: rgba(75, 25, 106, 0.449);
+  margin: 0;
+}
+.footer-links {
+  display: flex;               
+  justify-content: flex-start; 
+  position: absolute;         
+  left: 0;                     
+  bottom: 50px;                   
+  padding: 10px;              
+  gap: 20px;
+  text-decoration: none;                 
+}
+.footer-links a{
+  text-decoration: none;
+  color: #9A9595;
+}
+.descricao{
+  font-size:14px;
+  display: flex;               
+  justify-content: flex-start; 
+  position: absolute;         
+  left: 0;                     
+  bottom: 28px;                   
+  padding: 10px;              
+  gap: 10px;
+  text-decoration: none;
+  animation: none; 
+  color: #686767;
+}
+.descricao2{
+  font-size:14px;
+  display: flex;               
+  justify-content: flex-start; 
+  position: absolute;         
+  left: 0;                     
+  bottom: 5px;                   
+  padding: 10px;              
+  gap: 10px;
+  text-decoration: none; 
+  animation: none;
+  color: #686767;
+}
+
 /* -------------------Background Fixo------------------- */
 .background-layer {
   position: absolute; /* ou absolute, mas fixed é melhor para fundos */
