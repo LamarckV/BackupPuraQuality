@@ -313,6 +313,9 @@ section {
   line-height: 1.6;
   text-align: left;
 }
+.funcP{
+  display: none;
+}
 .conexo {
   position: relative;
   top: 275px;
@@ -732,7 +735,7 @@ section {
 .areaTp {
   position: relative;
   top: -70%;
-  left: 29%;
+  left: 12.5%;
   color: white;
   font-weight: bold;
 }
@@ -1212,7 +1215,7 @@ hr.divisoria2 {
   position: relative;
   top: 16%;
   border-radius: 20px;
-  box-shadow: 30px 10px 10px 30px#ff00c8;
+  box-shadow: 0 -5px 20px 10px rgba(200, 50, 180, 0.822);
   backdrop-filter: blur(20px) saturate(200%);
   -webkit-backdrop-filter: blur(20px) saturate(200%);
   background: linear-gradient(
@@ -1260,6 +1263,7 @@ hr.divisoria2 {
   position: relative;
   top: 16%;
   border-radius: 20px;
+  box-shadow: 0 -5px 25px 15px rgba(199, 34, 177, 0.801);
   backdrop-filter: blur(20px) saturate(200%);
   -webkit-backdrop-filter: blur(20px) saturate(200%);
   background: linear-gradient(
@@ -1307,6 +1311,7 @@ hr.divisoria2 {
   position: relative;
   top: 16%;
   border-radius: 20px;
+  box-shadow: 0 -5px 20px 10px rgba(255, 0, 221, 0.933);
   backdrop-filter: blur(20px) saturate(200%);
   -webkit-backdrop-filter: blur(20px) saturate(200%);
   background: linear-gradient(
@@ -1646,7 +1651,7 @@ hr.divisoria2 {
     left: 4%;
   }
   .relatorios {
-    top: -5.5%;
+    top: -7%;
   }
   .relatorios > h1 {
     font-size: var(--tamanho-subtitulo);
@@ -1753,6 +1758,9 @@ hr.divisoria2 {
   .plano1:hover,
   .plano2:hover {
     top: 8%;
+  }
+  .plano1:hover, .plano2:hover, .plano3:hover{
+    transform: scale(1.05);
   }
   .bola {
     top: 20%;

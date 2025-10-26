@@ -18,29 +18,21 @@
   <!-- CORPO DO SITE -->
     <div class="container-geral">
       <a class="link_pura" href="../index.html">
+        <img class="homeButton" src="../img/homeButton.png" alt="homeButton" />
         <h1 class="texto_pura" ">PuraQuality</h1>
       </a>
       <h1 class="texto_bv">Comece agora conosco</h1>
-      <div class="container-form">
-          <button class="google_button">
-            <img class="img_google" src="../img/google_logo.png" alt="google">
-            <p class="texto_google">Entrar com o google</p>
-          </button>
-          <div class="divider-container">
-          <div class="divider divider2"></div><p class="divider_text">or<p><div class="divider"></div>
+      <form class="form" action="#" method="post" onsubmit="return validarFormulario()">
+        <div class="form-group">
+          <div class="inputs">
+            <input type="email" id="email" name="email" placeholder="Digite seu CNPJ" required />
+            <input type="email" id="email_empresa" name="empresa" placeholder="Digite o email da sua empresa" required />
+            <input type="password" id="senha" name="senha" placeholder="Digite sua senha" required />
+            <input type="password" id="confirm_senha" name="senha" placeholder="Confirme sua senha" required />
           </div>
-            <form class="form" action="#" method="post" onsubmit="return validarFormulario()">
-              <div class="form-group">
-                  <div class="inputs">
-                    <input type="email" id="email" name="email" placeholder="Digite seu CNPJ" required />
-                    <input type="email" id="email_empresa" name="empresa" placeholder="Digite o email da sua empresa" required />
-                    <input type="password" id="senha" name="senha" placeholder="Digite sua senha" required />
-                    <input type="password" id="confirm_senha" name="senha" placeholder="Confirme sua senha" required />
-                  </div>
-                  <button class="botao" type="submit">Entrar</button>
-              </div>
-              </form>
-            </div>
+          <button class="botao" type="submit">Entrar</button>
+        </div>
+      </form>
       </div>
       <img class="celular" src="../img/celularSolo.png" alt="celularSingUp">
       <img class="bola_cromo" src="../img/bola_cromo.png" alt="bola_cromo">
