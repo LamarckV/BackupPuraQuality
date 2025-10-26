@@ -416,6 +416,7 @@ section {
 .imgMeta {
   width: 250px;
   border-radius: 15px;
+  transition: 0.6s ease;
 
   animation: reveal 1s ease-in-out both;
   animation-timeline: view();
@@ -1211,6 +1212,7 @@ hr.divisoria2 {
   position: relative;
   top: 16%;
   border-radius: 20px;
+  box-shadow: 30px 10px 10px 30px#ff00c8;
   backdrop-filter: blur(20px) saturate(200%);
   -webkit-backdrop-filter: blur(20px) saturate(200%);
   background: linear-gradient(
@@ -1358,6 +1360,10 @@ hr.divisoria2 {
 .plano3:hover ul li::before {
   background: linear-gradient(135deg, #00ff88, #00cc6a);
   box-shadow: 0 4px 12px rgba(0, 255, 136, 0.5);
+}
+.imgMeta:hover {
+  transform: scale(1.15);
+  transition: 0.6s ease;
 }
 /* ------------------- Animations ------------------- */
 @keyframes girando {
@@ -1582,6 +1588,7 @@ hr.divisoria2 {
   }
   .imgMeta {
     width: 200px;
+    transition: 0.6s ease;
   }
   .gridODS {
     grid-template-columns: repeat(2, 1fr);
