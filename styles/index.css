@@ -1420,6 +1420,9 @@ hr.divisoria2 {
   .bola_cromo2{
     top: -30%;
   }
+  .bola_cromo{
+    top: 55%;
+  }
   /* CONTPRINCIPAL */
   .qsGrid{
     left: -2.5%;
@@ -1481,6 +1484,60 @@ hr.divisoria2 {
   }
   .ai{
     top: -150px;
+  }
+  /* BACKGROUND */
+  .background-layer {
+    position: absolute;
+    height: 3000px;
+    top: -40%;
+  }
+  .ledBack{
+    top: 30%;
+    height: 4100px;
+  }
+  .bolaC7Back {
+    top: -90%;
+    left: -15%;
+  }
+  .bolaC4Back {
+    top: -92%;
+    left: 80%;
+  }
+  .bolaC3Back {
+    top: -110%;
+    left: 35%;
+    width: 30%;
+  }
+  .bolaC5Back {
+    top: -72%;
+    left: -60%;
+  }
+  .bolaC6Back {
+    top: -70%;
+    left: 70%;
+  }
+  .bolaC2Back {
+    top: -70%;
+    width: 60%;
+    left: -40%;
+  }
+  .bolaC8Back {
+    top: -72%;
+    left: 70%;
+  }
+  .bolaC7Back2 {
+    top: -55%;
+    left: -70%;
+  }
+  /* PLANOS */
+  .plano1{
+    left: 3%;
+  }
+  .plano3{
+    right: 3%;
+  }
+  .plano2{
+    left: 37%;
   }
 }
 @media (max-width: 800px) {
